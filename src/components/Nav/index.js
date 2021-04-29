@@ -1,38 +1,31 @@
 import React from 'react';
 import logo from '../../assets/Emily/portfolio_logo.png';
 
-function Nav() {
+function Nav (props) {
+  const tabs = ['About Me', 'Portfolio', 'Contact', 'Resume'];
   return (
     <header className="flex-row px-1">
       <h2>
         <a href="/">
-          <span role="img" aria-label="camera"> <img src={logo} alt="emily"/></span>
-       </a>
+          <span role="img"> <img src={logo} alt="emily"/></span>
+        </a>
       </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about">
-              About me
-            </a>
-          </li>
-          <li className="mx-2">
-            <a href="#portfolio">
-              Portfolio
-            </a>
-          </li>
-          <li className="mx-2">
-            <a href='#contact-form'>
-              Contact Me
-            </a>
-          </li>
-          <li className="mx-2">
-            <a href="#resume">
-              Resume
-            </a>
-          </li>
-        </ul>
-      </nav>
+
+    <ul className="nav nav-tabs flex-row">
+      {tabs.map(tab => (
+        <li className="nav-item mx-2" key={tab}>
+          <a
+            href={'#' + tab.toLowerCase()}
+            onClick={() => props.handlePageChange(tab)}
+            className={
+              props.currentPage === tab ? 'nav-link active' : 'nav-link'
+            }
+          >
+            {tab}
+          </a>
+        </li>
+      ))}
+    </ul>
     </header>
   );
 }

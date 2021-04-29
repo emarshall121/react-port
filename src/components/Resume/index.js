@@ -3,9 +3,9 @@ import download from '../../assets/Emily/download.png';
 
 function Resume() {
   return (
-    <section>
+    <div class="box">
       <h1>Resume</h1>
-      <p>*Click here to <img style={{ width: "5%" }} src={download}/> my resume</p>
+      <p>*Click here to <img alt="download_button" style={{ width: "5%" }} src={download}/> my resume</p>
       <div>
         <h2>Front End Proficencies</h2>
           <ul>
@@ -22,7 +22,7 @@ function Resume() {
             <li>four</li>
           </ul>
       </div>
-    </section>
+    </div>
   )
 }
 
