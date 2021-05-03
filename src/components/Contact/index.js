@@ -36,7 +36,7 @@ function ContactForm() {
   };
 
   return (
-    <div class="box" style={{width: 640}}>
+    <div class="box mt-6" style={{width: 640, margin: "auto"}}>
       <h1 data-testid="h1tag">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>

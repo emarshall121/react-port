@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import ContactForm from './components/Contact';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
+import 'bulma/css/bulma.min.css';
 
 function Page() {
   // Using useState, set the default value for currentPage to 'Home'

@@ -10,7 +10,6 @@ function Nav (props) {
           <span role="img"> <img src={logo} alt="emily"/></span>
         </a>
       </h2>
-
     <ul className="nav nav-tabs flex-row">
       {tabs.map(tab => (
         <li className="nav-item mx-2" key={tab}>
